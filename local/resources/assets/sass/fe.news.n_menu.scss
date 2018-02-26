@@ -1,0 +1,25 @@
+#n_menu {
+  position: relative;
+  z-index: 1;
+  ul {
+    list-style: none;
+    margin-top: 30px;
+    li {
+      display: inline-block;
+      a {
+        text-transform: uppercase;
+        display: block;
+        color: $main-color;
+        padding: 5px 5px;
+        transition: all 0.2s;
+      }
+      a:hover{
+        color: $main-color-hover;
+      }
+      a.n_menu_present{
+        background-color: $main-color-hover;
+        color: white;
+      }
+    }
+  }
+}

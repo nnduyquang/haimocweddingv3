@@ -1,0 +1,62 @@
+#c_info{
+  img{
+    width: 100%;
+  }
+  h1{
+    text-transform: capitalize;
+    color: $main-color;
+    margin: 10px 0 10px 0;
+  }
+  .c_info_description{
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .c_info_albums{
+    .one-item {
+      text-align: center;
+      padding-bottom: 30px;
+      a {
+        color: $main-color;
+        .card {
+          border: none;
+          transition: 0.5s all;
+          padding: 0 0 10px 0;
+          img {
+            width: 100%;
+            position: relative;
+            z-index: 1;
+          }
+          .card-body {
+            padding: 20px 5px 0 5px;
+            line-height: 1.5;
+          }
+          .card-footer {
+            border: none;
+            background-color: white;
+            padding: 0;
+            p.btn {
+              display: block;
+              border: 1px solid $main-color;
+              text-transform: uppercase;
+              width: 50%;
+              margin: auto;
+              margin-top: 20px;
+              transition: all 0.2s ease-in-out;
+            }
+          }
+        }
+      }
+      a:hover {
+        .card {
+          box-shadow: 1px 6px 20px 0px rgba(0, 0, 0, 0.35);
+          .card-footer {
+            p.btn {
+              background-color: $main-color;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

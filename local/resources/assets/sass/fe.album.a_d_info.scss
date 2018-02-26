@@ -1,0 +1,23 @@
+#a_d_info {
+  .a_d_info_description {
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .a_d_info_grid_album {
+    /* ---- .grid-item ---- */
+
+    .grid-sizer,
+    .grid-item {
+      width: 33.333%;
+    }
+
+    .grid-item {
+      float: left;
+    }
+
+    .grid-item img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+}

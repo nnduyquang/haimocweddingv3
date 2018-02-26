@@ -1,0 +1,45 @@
+#ct_info {
+  .ct_info_map {
+  }
+  .ct_info_form {
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      margin: 5px 0 5px 0;
+      padding: 0 0 0 5px;
+      height: 50px;
+    }
+    textarea[name='notes'] {
+      width: 100%;
+    }
+    button.ct_info_form_btn {
+      margin-top: 10px;
+      padding: 5px 40px 5px 40px;
+      border: none;
+      background-color: $main-color;
+      color: white;
+      text-transform: uppercase;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    button.ct_info_form_btn:hover {
+      background-color: $main-color-hover;
+    }
+  }
+  .ct_info_address {
+    ul {
+      line-height: 2.5;
+      list-style: none;
+      li {
+        i{
+          margin-right: 5px;
+          color: $main-color;
+        }
+        span{
+          font-weight: bold;
+          display: inline-block;
+          width: 95px
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,181 @@
+#menu {
+  background-color: white;
+  .menu-wrap {
+    height: 130px;
+    //overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    .logo {
+      position: absolute;
+      bottom: 0;
+      right: 45%;
+      background-color: white;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 10px;
+      img {
+        width: 200px;
+      }
+    }
+    .logo-fixed{
+      top:0;
+      background: none;
+      img{
+        width: 119px;
+      }
+    }
+
+    .menu-right-contact {
+      float: right;
+      height: 130px;
+      img{
+        transition: all 0.5s ease;
+        height: 130px;
+      }
+    }
+    .menu-right-contact-fixed{
+      img{
+        height: 63px;
+      }
+    }
+
+    .menu-left-info {
+      float: none;
+      width: auto;
+      overflow-x: auto;
+      overflow-y: -webkit-paged-x;
+      .menu-top-info {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #d4d4d4;
+        transition: all 0.5s ease;
+        height: 70px;
+        margin-left: 20px;
+        p {
+          margin-top: 5px;
+          font-size: 11px;
+          color: #7a7a7a;
+        }
+      }
+      .fixed-top {
+        height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        p{
+          display: none;
+        }
+      }
+      .menu-bottom-info {
+        ul.menu-boottom-info-left {
+          float: left;
+          margin-left:20px
+        }
+        ul.menu-boottom-info-right {
+          float: right;
+        }
+        ul.menu-boottom-info-left, ul.menu-boottom-info-right {
+          padding-top: 20px;
+          li {
+            float: left;
+            display: inline;
+            margin-right: 20px;
+            text-transform: uppercase;
+            font-weight: bolder;
+            position: relative;
+            a {
+              color: $main-color;
+            }
+          }
+          li.li-normal{
+            a{
+              position: relative;
+
+            }
+            a:after{
+              content: "";
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: -10px;
+              width: 0%;
+              height: 1px;
+              margin: auto;
+              background-color: transparent;
+              transition: all 0.2s;
+            }
+          }
+          li.li-normal:hover{
+            a{
+              color: $main-color-hover;
+            }
+            a:after{
+              background-color: $main-color-hover;
+              width: 100%;
+            }
+          }
+          li.has-item-down{
+            padding: 0px;
+            transition: all 0.2s;
+          }
+          li.has-item-down:hover{
+            background-color: $main-color;
+            padding: 10px;
+            >a{
+              color: white;
+            }
+          }
+          li.has-item-down:hover ul {
+            display: block;
+            background-color: $main-color;
+            padding-top:10px;
+            //opacity: 1;
+          }
+          li.has-item-down ul {
+            display: none;
+            transition: all 0.2s;
+            //opacity: 0;
+            position: absolute;
+            top: 100%;
+            left: 0px;
+            padding: 25px 0 10px 10px;
+            z-index: 9;
+            white-space: nowrap;
+            li {
+              line-height: 1.6;
+              transition: all 0.2s;
+              width: 100%;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.27);
+              a{
+                color: white;
+                line-height: 33px;
+              }
+            }
+            li:hover{
+              background-color: white;
+              padding-left: 10px;
+              a{
+                color: #333333;
+
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+}
+.wrap-fixed-top{
+  position: fixed !important;
+  background-color: white;
+  height: 63px!important;
+}
+
+@media screen and(max-width: 1024px) {
+
+}
+
+@media screen and(max-width: 992px) {
+
+}

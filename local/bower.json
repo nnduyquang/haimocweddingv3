@@ -1,0 +1,26 @@
+{
+  "name": "Quang",
+  "description": "Hai Moc Wedding",
+  "main": "",
+  "authors": [
+    "Quang-PC <nnduyquang@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "font-awesome": "^5.0.6",
+    "jquery": "^3.3.1",
+    "nivo-slider": "*",
+    "fancybox": "^3.2.5",
+    "masonry-layout": "masonry#^4.2.1",
+    "imagesloaded": "^4.1.4"
+  }
+}

@@ -1,0 +1,53 @@
+#a_d_sidebar {
+  h4.title {
+    color: black;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+  .a_d_sidebar_locations {
+    ul {
+      list-style: none;
+      line-height: 1.5;
+      li {
+        a {
+          transition: all 0.2s;
+          color: $main-color;
+          text-transform: capitalize;
+        }
+        a:hover {
+          color: $main-color-hover;
+        }
+      }
+    }
+  }
+  .a_d_sidebar_prices{
+    a{
+      transition: all 0.2s;
+      color: $main-color;
+    }
+    a:hover{
+      color: $main-color-hover;
+    }
+  }
+  .a_d_sidebar_albums {
+    .one-item {
+      margin-bottom: 20px;
+      img {
+        width: 100%;
+        height: 150px;
+      }
+      a {
+        color: $main-color;
+        transition: all 0.2s;
+        p.one-item-title {
+          padding: 5px 0 5px 0;
+        }
+      }
+      a:hover {
+        color: $main-color-hover;
+      }
+
+    }
+  }
+}

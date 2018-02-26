@@ -1,0 +1,136 @@
+#h_albums {
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+  margin-bottom: 60px;
+  h3 {
+    text-align: center;
+    position: relative;
+    font-size: 39px;
+    color: $main-color;
+    padding-bottom: 60px;
+  }
+  h3:after {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    display: block;
+    width: 60px;
+    height: 1px;
+    margin-left: -30px;
+    background-color: #c8c8c8;
+    content: ' ';
+  }
+  ul.album-category {
+    text-align: center;
+    li {
+      display: inline;
+      padding-left: 15px;
+      padding-right: 15px;
+      a {
+        color: #777;
+        transition: all 0.5s ease-in-out;
+        font-size: 18px;
+        position: relative;
+      }
+      //a:hover{
+      //  border-bottom: 1px solid;
+      //}
+      a:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        bottom: -10px;
+        height: 1px;
+        background: $main-color;
+        transition: all 0.5s ease-in-out;
+      }
+      a:after {
+        content: "";
+        position: absolute;
+        left: -19px;
+        bottom: 0;
+        top: 5px;
+        margin: auto;
+        width: 4px;
+        height: 4px;
+        background: #999;
+        border-radius: 50%;
+      }
+      a:hover {
+        color: $main-color;
+      }
+      a:hover:before {
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+  .list-album {
+    margin-top: 20px;
+    .one-item {
+      text-align: center;
+      padding-bottom: 30px;
+      a {
+        color: $main-color;
+        .card {
+          border: none;
+          transition: 0.5s all;
+          padding: 0 0 10px 0;
+          img {
+            width: 100%;
+            position: relative;
+            z-index: 1;
+          }
+          .card-body {
+            padding: 20px 5px 0 5px;
+            line-height: 1.5;
+          }
+          .card-footer {
+            border: none;
+            background-color: white;
+            padding: 0;
+            p.btn {
+              display: block;
+              border: 1px solid $main-color;
+              text-transform: uppercase;
+              width: 50%;
+              margin: auto;
+              margin-top: 20px;
+              transition: all 0.2s ease-in-out;
+            }
+          }
+        }
+      }
+      a:hover {
+        .card {
+          box-shadow: 1px 6px 20px 0px rgba(0, 0, 0, 0.35);
+          .card-footer {
+            p.btn {
+              background-color: $main-color;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .view-all {
+    text-align: center;
+    margin-top: 20px;
+    a {
+      color: $main-color;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+  #section2 {
+    .list-album {
+      .one-item {
+        padding-left: 0;
+      }
+    }
+  }
+}
