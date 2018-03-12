@@ -21,7 +21,12 @@ $(document).ready(function () {
         });
     }
     function runFancybox(){
-        plugins.fancybox.fancybox();
+        plugins.fancybox.fancybox({
+            thumbs : {
+                autoStart   : true,   // Display thumbnails on opening
+                hideOnClose : true     // Hide thumbnail grid when closing animation starts
+            },
+        });
     }
     function runGridAlbum() {
         var $grid = plugins.gridAlbum.masonry({

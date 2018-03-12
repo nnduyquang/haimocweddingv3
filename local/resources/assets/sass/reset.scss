@@ -45,4 +45,11 @@ a, a:hover,a:active{
   text-decoration: none!important;
 }
 
+.card {
+  border: none;
+  .card-body {
+    padding: 0;
+  }
+}
+
 //END RESET CSS

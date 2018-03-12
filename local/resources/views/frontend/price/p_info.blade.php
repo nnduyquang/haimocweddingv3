@@ -1,7 +1,7 @@
 <div id="p_info">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="title">Bảng Giá</h1>
+            <h1 class="title">Bảng Giá Ngoại Cảnh</h1>
         </div>
     </div>
     <div class="row">
@@ -20,42 +20,62 @@
     </div>
     <div class="p_info_list">
         <div class="row">
-            <div class="one-item col-4">
-                <a href="">
+            <div class="one-item card col-4">
+                <a class="fancybox" data-fancybox="gallery-p-info"
+                   href="{{url('/').'/images/temps/tmp_price_p_info.jpg'}}">
                     {{ Html::image('images/temps/tmp_price_p_info.jpg','',array('class'=>'slideshow')) }}
-                    <h3 class="title">Chụp Ảnh Cưới Ngoại Cảnh</h3>
+                    <div class="card-body">
+                        <h3 class="title">Chụp Ảnh Cưới Ngoại Cảnh Chụp Ảnh Cưới Ngoại Cảnh Chụp Ảnh Cưới Ngoại Cảnh</h3>
+                    </div>
                 </a>
             </div>
-            <div class="one-item col-4">
-                <a href="">
+            <div class="one-item card col-4">
+                <a class="fancybox" data-fancybox="gallery-p-info"
+                   href="{{url('/').'/images/temps/tmp_price_p_info.jpg'}}">
                     {{ Html::image('images/temps/tmp_price_p_info.jpg','',array('class'=>'slideshow')) }}
-                    <h3 class="title">Chụp Ảnh Cưới Ngoại Cảnh</h3>
+                    <div class="card-body">
+                        <h3 class="title">Chụp Ảnh Cưới Ngoại Cảnh</h3>
+                    </div>
                 </a>
             </div>
-            <div class="one-item col-4">
-                <a href="">
+            <div class="one-item card col-4">
+                <a class="fancybox" data-fancybox="gallery-p-info"
+                   href="{{url('/').'/images/temps/tmp_price_p_info.jpg'}}">
                     {{ Html::image('images/temps/tmp_price_p_info.jpg','',array('class'=>'slideshow')) }}
-                    <h3 class="title">Chụp Ảnh Cưới Ngoại Cảnh</h3>
+                    <div class="card-body">
+                        <h3 class="title">Chụp Ảnh Cưới Ngoại Cảnh</h3>
+                    </div>
                 </a>
             </div>
-            <div class="one-item col-4">
-                <a href="">
+            <div class="one-item card col-4">
+                <a class="fancybox" data-fancybox="gallery-p-info"
+                   href="{{url('/').'/images/temps/tmp_price_p_info.jpg'}}">
                     {{ Html::image('images/temps/tmp_price_p_info.jpg','',array('class'=>'slideshow')) }}
-                    <h3 class="title">Chụp Ảnh Cưới Ngoại Cảnh</h3>
+                    <div class="card-body">
+                        <h3 class="title">Chụp Ảnh Cưới Ngoại Cảnh</h3>
+                    </div>
                 </a>
             </div>
-            <div class="one-item col-4">
-                <a href="">
+            <div class="one-item card col-4">
+                <a class="fancybox" data-fancybox="gallery-p-info"
+                   href="{{url('/').'/images/temps/tmp_price_p_info.jpg'}}">
                     {{ Html::image('images/temps/tmp_price_p_info.jpg','',array('class'=>'slideshow')) }}
-                    <h3 class="title">Chụp Ảnh Cưới Ngoại Cảnh</h3>
+                    <div class="card-body">
+                        <h3 class="title">Chụp Ảnh Cưới Ngoại Cảnh</h3>
+                    </div>
                 </a>
             </div>
-            <div class="one-item col-4">
-                <a href="">
+            <div class="one-item card col-4">
+                <a class="fancybox" data-fancybox="gallery-p-info"
+                   href="{{url('/').'/images/temps/tmp_price_p_info.jpg'}}">
                     {{ Html::image('images/temps/tmp_price_p_info.jpg','',array('class'=>'slideshow')) }}
-                    <h3 class="title">Chụp Ảnh Cưới Ngoại Cảnh</h3>
+                    <div class="card-body">
+                        <h3 class="title">Chụp Ảnh Cưới Ngoại Cảnh</h3>
+                    </div>
                 </a>
             </div>
+
+
         </div>
     </div>
 </div>

@@ -21,6 +21,8 @@
     "nivo-slider": "*",
     "fancybox": "^3.2.5",
     "masonry-layout": "masonry#^4.2.1",
-    "imagesloaded": "^4.1.4"
+    "imagesloaded": "^4.1.4",
+    "admin-lte": "^2.4.3",
+    "gijgo": "^1.8.2"
   }
 }
