@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 13, 2018 at 12:26 AM
+-- Generation Time: Mar 13, 2018 at 10:38 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.27
 
@@ -39,7 +39,10 @@ CREATE TABLE `category_permissions` (
 
 INSERT INTO `category_permissions` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (1, 'Role', '2018-03-12 13:14:02', '2018-03-12 13:14:02'),
-(2, 'User', '2018-03-12 13:14:02', '2018-03-12 13:14:02');
+(2, 'User', '2018-03-12 13:14:02', '2018-03-12 13:14:02'),
+(3, 'Menu', '2018-03-13 01:19:51', '2018-03-13 01:19:51'),
+(4, 'Page', '2018-03-13 01:19:51', '2018-03-13 01:19:51'),
+(5, 'Post', '2018-03-13 01:19:51', '2018-03-13 01:19:51');
 
 -- --------------------------------------------------------
 
@@ -55,6 +58,24 @@ CREATE TABLE `category_posts` (
   `template` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `parent_id` int(10) UNSIGNED DEFAULT NULL,
   `page_id` int(11) NOT NULL DEFAULT '0',
+  `order` int(11) NOT NULL DEFAULT '1',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `locations`
+--
+
+CREATE TABLE `locations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `path` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image_pc` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image_mobile` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `order` int(11) NOT NULL DEFAULT '1',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -99,7 +120,8 @@ CREATE TABLE `migrations` (
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1),
 (2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2018_03_12_200859_create_entrust_setup_tables', 2);
+(3, '2018_03_12_200859_create_entrust_setup_tables', 2),
+(4, '2018_03_13_155356_create_locations_table', 3);
 
 -- --------------------------------------------------------
 
@@ -141,7 +163,19 @@ INSERT INTO `permissions` (`id`, `name`, `display_name`, `description`, `categor
 (5, 'user-list', 'Xem Danh Sách Users', 'Được Xem Danh Sách Users', 2, '2018-03-12 13:15:10', '2018-03-12 13:15:10'),
 (6, 'user-create', 'Tạo User', 'Được Tạo User Mới', 2, '2018-03-12 13:15:10', '2018-03-12 13:15:10'),
 (7, 'user-edit', 'Cập Nhật User', 'Được Cập Nhật User', 2, '2018-03-12 13:15:10', '2018-03-12 13:15:10'),
-(8, 'user-delete', 'Xóa user', 'Được Xóa User', 2, '2018-03-12 13:15:11', '2018-03-12 13:15:11');
+(8, 'user-delete', 'Xóa user', 'Được Xóa User', 2, '2018-03-12 13:15:11', '2018-03-12 13:15:11'),
+(9, 'menu-list', 'Toàn Quyền Menu', 'Được Toàn Quyền Menu', 3, '2018-03-13 01:22:03', '2018-03-13 01:22:03'),
+(10, 'menu-create', 'Thêm Mới Menu', 'Được Thêm Mới Menu', 3, '2018-03-13 01:22:03', '2018-03-13 01:22:03'),
+(11, 'menu-edit', 'Cập Nhật Menu', 'Được Cập Nhật Menu', 3, '2018-03-13 01:22:03', '2018-03-13 01:22:03'),
+(12, 'menu-delete', 'Xóa Menu', 'Được Xóa Menu', 3, '2018-03-13 01:22:03', '2018-03-13 01:22:03'),
+(13, 'page-list', 'Toàn Quyền Trang', 'Được Toàn Quyền Trang', 4, '2018-03-13 01:22:04', '2018-03-13 01:22:04'),
+(14, 'page-create', 'Thêm Mới Trang', 'Được Thêm Mới Trang', 4, '2018-03-13 01:22:04', '2018-03-13 01:22:04'),
+(15, 'page-edit', 'Cập Nhật Trang', 'Được Cập Nhật Trang', 4, '2018-03-13 01:22:04', '2018-03-13 01:22:04'),
+(16, 'page-delete', 'Xóa Trang', 'Được Xóa Trang', 4, '2018-03-13 01:22:04', '2018-03-13 01:22:04'),
+(17, 'post-list', 'Toàn Quyền Bài Viết', 'Được Toàn Quyền Viết', 5, '2018-03-13 01:22:04', '2018-03-13 01:22:04'),
+(18, 'post-create', 'Thêm Mới Viết', 'Được Thêm Mới Viết', 5, '2018-03-13 01:22:04', '2018-03-13 01:22:04'),
+(19, 'post-edit', 'Cập Nhật Viết', 'Được Cập Nhật Viết', 5, '2018-03-13 01:22:04', '2018-03-13 01:22:04'),
+(20, 'post-delete', 'Xóa Viết', 'Được Xóa Viết', 5, '2018-03-13 01:22:04', '2018-03-13 01:22:04');
 
 -- --------------------------------------------------------
 
@@ -166,7 +200,19 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (5, 1),
 (6, 1),
 (7, 1),
-(8, 1);
+(8, 1),
+(9, 1),
+(10, 1),
+(11, 1),
+(12, 1),
+(13, 1),
+(14, 1),
+(15, 1),
+(16, 1),
+(17, 1),
+(18, 1),
+(19, 1),
+(20, 1);
 
 -- --------------------------------------------------------
 
@@ -184,6 +230,7 @@ CREATE TABLE `posts` (
   `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_description` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_keywords` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `post_type` tinyint(3) UNSIGNED NOT NULL DEFAULT '0',
   `isActive` tinyint(1) NOT NULL DEFAULT '1',
   `user_id` int(10) UNSIGNED NOT NULL,
@@ -272,6 +319,12 @@ ALTER TABLE `category_posts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `locations`
+--
+ALTER TABLE `locations`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `menus`
 --
 ALTER TABLE `menus`
@@ -340,11 +393,16 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `category_permissions`
 --
 ALTER TABLE `category_permissions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `category_posts`
 --
 ALTER TABLE `category_posts`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `locations`
+--
+ALTER TABLE `locations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `menus`
@@ -355,12 +413,12 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `posts`
 --

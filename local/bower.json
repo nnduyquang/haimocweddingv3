@@ -23,6 +23,7 @@
     "masonry-layout": "masonry#^4.2.1",
     "imagesloaded": "^4.1.4",
     "admin-lte": "^2.4.3",
-    "gijgo": "^1.8.2"
+    "gijgo": "^1.8.2",
+    "ckeditor": "^4.8.0"
   }
 }

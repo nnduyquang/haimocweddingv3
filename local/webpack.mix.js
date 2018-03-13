@@ -36,9 +36,6 @@ mix.styles([
 
     ], '../css/core.backend.css')
     // .copy([
-    //     'bower_components/font-awesome/web-fonts-with-css/webfonts/**'
-    // ], '../webfonts')
-    // .copy([
     //     'bower_components/nivo-slider/themes',
     // ], '../css/themes', false)
     .styles('resources/assets/js/scripts.js', '../js/scripts.js')
@@ -58,9 +55,12 @@ mix.styles([
         'resources/assets/js/ulti.js',
         // 'resources/assets/js/be.config.slider.js',
         // 'resources/assets/js/be.emp.js',
-        // 'resources/assets/js/be.page.js',
+        'resources/assets/js/be.page.js',
         // 'resources/assets/js/be.config.email.js',
-        // 'resources/assets/js/be.post.js',
+        'resources/assets/js/be.post.js',
         // 'resources/assets/js/be.tuyendung.js',
         'resources/assets/js/be.menu.js',
     ], '../js/backend.js')
+    // .copy([
+    //     'bower_components/font-awesome/web-fonts-with-css/webfonts/**'
+    // ], '../webfonts')
