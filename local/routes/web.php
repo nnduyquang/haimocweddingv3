@@ -92,5 +92,14 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('sml_admin/load-tree','MenuController@loadTreeMenu');
     Route::delete('sml_admin/menu-delete/{id}','MenuController@deleteMenu');
 
+    //LOCATION
+    Route::get('sml_admin/dia-diem', ['as' => 'location.index', 'uses' => 'LocationController@index', 'middleware' => ['permission:location-list|location-create|location-edit|location-delete']]);
+    Route::post('sml_admin/dia-diem/create', ['as' => 'location.store', 'uses' => 'LocationController@store', 'middleware' => ['permission:location-create']]);
+    Route::post('sml_admin/dia-diem', ['as' => 'location.search', 'uses' => 'LocationController@search']);
+    Route::get('sml_admin/dia-diem/create', ['as' => 'location.create', 'uses' => 'LocationController@create', 'middleware' => ['permission:location-create']]);
+    Route::get('sml_admin/dia-diem/{id}/edit', ['as' => 'location.edit', 'uses' => 'LocationController@edit', 'middleware' => ['permission:location-edit']]);
+    Route::patch('sml_admin/dia-diem/{id}', ['as' => 'location.update', 'uses' => 'LocationController@update', 'middleware' => ['permission:location-edit']]);
+    Route::delete('sml_admin/dia-diem/{id}', ['as' => 'location.destroy', 'uses' => 'LocationController@destroy', 'middleware' => ['permission:location-delete']]);
+
 });
 

@@ -60,6 +60,7 @@ mix.styles([
         'resources/assets/js/be.post.js',
         // 'resources/assets/js/be.tuyendung.js',
         'resources/assets/js/be.menu.js',
+        'resources/assets/js/be.location.js',
     ], '../js/backend.js')
     // .copy([
     //     'bower_components/font-awesome/web-fonts-with-css/webfonts/**'
